@@ -10,7 +10,7 @@ public class DetailDao {
 	private String createdAt;
 	private String name;
 	private String email;
-	private int contact;
+	private String contact;
 	private String DeliveryAdd;
 	private String BillingAdd;
 	private int subtotal;
@@ -34,7 +34,7 @@ public class DetailDao {
 	}
 	
 	
-	public DetailDao(String createdAt, String name, String email, int contact, String deliveryAdd, String billingAdd,
+	public DetailDao(String createdAt, String name, String email, String contact, String deliveryAdd, String billingAdd,
 			int subtotal, String shipping, int tax, int total, String sellerGst, String purchaseGst) {
 		super();
 		this.createdAt = createdAt;
@@ -70,10 +70,10 @@ public class DetailDao {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 	public String getDeliveryAdd() {

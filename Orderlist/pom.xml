@@ -9,22 +9,14 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.einfo</groupId>
-	<artifactId>orderdetails</artifactId>
+	<artifactId>Orderlist</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>orderdetails</name>
+	<name>Orderlist</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-	
-	<dependency>
-  <groupId>org.postgresql</groupId>
-  <artifactId>postgresql</artifactId>
-  <version>42.2.10</version>
-</dependency>
-	
-	
 	
 	<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jasper -->
 <dependency>
@@ -33,8 +25,27 @@
     <version>10.1.5</version>
 </dependency>
 	
-
+	<!-- https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl -->
+<dependency>
+    <groupId>org.glassfish.web</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+    <version>2.0.0</version>
+</dependency>
 	
+	
+	<!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api -->
+<dependency>
+    <groupId>jakarta.servlet.jsp.jstl</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+    <version>2.0.0</version>
+</dependency>
+	
+	
+	 <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <scope>runtime</scope>
+    </dependency>
 	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -52,11 +63,6 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -69,6 +75,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
+			<plugin>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>2.10</version>
+  <configuration>
+    <useFile>false</useFile>
+  </configuration>
+</plugin>
+			
 		</plugins>
 	</build>
 
